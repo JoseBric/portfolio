@@ -1,0 +1,85 @@
+@import '../../variables';
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $primary; }
+}
+
+#home {
+  .heavy-1 {
+    font-weight: 600;
+  }
+
+  .big-logo {
+    opacity: 0;
+    position: absolute;
+    top: 2rem;
+    left: calc(50vw - 100px);
+    @include ease-in-fast;
+    &.show-up {
+      opacity: 1;
+    }
+  }
+
+  .main-title {
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      .typewriter {
+        margin-top: calc(50vh - 64px);
+        .title {
+          padding: 0 .2rem;
+          border-right: .10em solid $secondary-green; /* The typwriter cursor */
+          margin: 0 auto;
+          overflow: hidden;
+          white-space: nowrap;
+          letter-spacing: 0.1rem;
+          
+          color: lighten($light, 20);
+          font-size: 64px;
+          animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
+          
+          }
+      }
+    }
+    .description {
+      @include ease-in-fast;
+      color: $light;
+      font-size: 32px;
+      margin-top: 2rem;
+      opacity: 0;
+
+      &.show-up {
+        opacity: 1;
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 5rem;
+    opacity: 0;
+    @include ease-in;
+    a.btn-primary {
+      color: $light;
+      // background: $primary;
+      border: $primary 2px dotted;
+      text-decoration: none;
+      padding: 10px;
+
+      border-radius: 15px;
+
+      @include ease-in-fast;
+      &:hover {
+        border-color: $primary;
+        border-style: solid;
+      }
+    }
+    &.show-up {
+      opacity: 1;
+    }
+  }
+}

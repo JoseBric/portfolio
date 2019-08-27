@@ -1,0 +1,18 @@
+$light: #eeeeee;
+$dark: #1a1a1a;
+$dark-light: #2a2a2a;
+$primary: #ec4c4c;
+$secondary-green: #29c39b;
+$secondary-blue: #2e9b9b;
+
+@mixin ease-in {
+  transition: 1s ease-in all;
+}
+
+@mixin ease-in-fast {
+  transition: 0.5s ease-in all;
+}
+
+.clear {
+  transition: none;
+}

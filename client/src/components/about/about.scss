@@ -1,0 +1,51 @@
+@import '../../variables';
+
+#about {
+  animation: fade-in 1.5s ease-in;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .title {
+    margin: 5rem 0 3rem 0;
+  }
+  .description {
+    margin: 0 auto;
+    font-size: 16px;
+    width: 45vw;
+    letter-spacing: 0.15rem;
+    line-height: 1.5;
+    color: $light;
+  }
+
+  .skills {
+    .subtitle {
+      color: $light;
+      font-size: 32px;
+      margin: 5rem 0 3rem 0;
+    }
+    .skills-lists {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      .fe-skill-set, .be-skill-set {  
+        h3 {
+          color: $light;
+          font-size: 1.4rem;
+        }
+        ul {
+          list-style: none;
+          li {
+            font-weight: 600;
+            margin: 1rem;
+          }
+        }
+      }   
+    }
+  }
+}
