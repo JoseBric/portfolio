@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import Particles from 'particlesjs'
 import './about.scss';
 
 const About = () => {
+
+
   return (
     <div id="about">
       <h1 className="title">
@@ -16,7 +19,7 @@ const About = () => {
         </h2>
         <div className="skills-lists">
           <div className="fe-skill-set">
-            <h3>Front-end skill set</h3>
+            <h3>Front-end skills set</h3>
             <ul>
               <li className="primary">
                 Angular 2+
@@ -42,7 +45,7 @@ const About = () => {
             </ul>
           </div>
           <div className="be-skill-set">
-            <h3>Back-end skill set</h3>
+            <h3>Back-end skills set</h3>
             <ul>
               <li className="primary">
                 Express

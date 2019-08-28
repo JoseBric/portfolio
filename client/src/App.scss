@@ -38,3 +38,12 @@ h1.title {
 .secondary-blue {
   color: lighten($secondary-blue, 5);
 }
+
+
+#particlesjs {
+  opacity: 0.6;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
