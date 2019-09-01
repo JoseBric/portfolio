@@ -10,11 +10,10 @@ import Projects from './components/projects/Projects';
 
 function App() {
   useEffect(() => {
-    const connected = window.innerWidth > 1300 ? true : false;
-    const maxPart = window.innerWidth > 1200 ? 60 : 50;
+    const maxPart = window.innerWidth > 1200 ? 70 : 25;
     Particles.init({
       selector: '#particlesjs',
-      connectParticles: connected,
+      connectParticles: true,
       maxParticles: maxPart,
     })
 

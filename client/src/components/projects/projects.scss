@@ -1,5 +1,6 @@
 @import '../../variables';
 #projects {
+  margin-left: 60px;
   animation: fade-in 1s ease-out;
   .title {
     margin: 5rem 0 3rem 0;
@@ -67,6 +68,47 @@
           z-index: 1;
         }
       }
+    }
+  }
+
+  @media (hover: none) {
+    .project {
+      &:hover {
+        img {
+          
+          opacity: 1 !important;
+        }
+      }
+
+      margin: 1rem 0;
+      position: static !important;
+      img.project-img {
+        z-index: 0;
+
+        position: static !important;
+        display: block;
+
+      }
+      .content {
+        position: static !important;
+        transform: translate(0%, 0%) !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .projects-list {
+      grid-template-columns: 1fr; 
+      grid-gap: 0.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+  }
+
+  @media screen and (max-width: 450px) {
+    .title {
+      font-size: 3rem;
     }
   }
 }
