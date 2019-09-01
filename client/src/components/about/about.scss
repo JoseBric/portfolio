@@ -44,15 +44,29 @@
   }
   
   @media screen and (max-width: 1050px) {
-
   }
   
-  @media screen and (min-width: 1040px) and (max-width: 1050px) {
+  @media screen and (max-width: 650px) {
+    margin-left: 60px !important;
+    .description {
+      width: 60vw;
+    }
 
+    .skills-lists {
+      flex-direction: column !important;
+      .fe-skill-set {
+        margin: 0 0 2rem 0;
+      }
+    }
   }
 
-  @media screen and (min-width: 1040px) and (max-width: 1050px) {
-
+  @media screen and (max-width: 450px) {
+    .title {
+      font-size: 3rem;
+    }
+    .subtitle {
+      font-size: 1.75rem !important;
+    }
   }
 
 }
