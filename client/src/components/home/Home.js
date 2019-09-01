@@ -37,7 +37,12 @@ const Home = () => {
         </div>
       </div>
       <div className="contact" ref={el=>contact=el}>
-        <Link to="/contact" className="btn-primary">Contact Me</Link>
+        <p className="email">
+          josebric@hotmail.com
+        </p>
+        <p className="phone">
+          +52 6624193497
+        </p>
       </div>
     </div>
   );

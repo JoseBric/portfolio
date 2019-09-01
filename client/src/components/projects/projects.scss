@@ -1,0 +1,72 @@
+@import '../../variables';
+#projects {
+  animation: fade-in 1s ease-out;
+  .title {
+    margin: 5rem 0 3rem 0;
+  }
+  .projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0.1rem;
+    .project {
+      width: 100%;
+      margin: 1rem 0;
+      overflow: hidden;
+      position: relative;
+      img.project-img {
+        transition: 0.5s ease-out opacity;
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        p.project-title {
+          margin: 0.7rem 0;
+          color: $light;
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+        ul.technologies {
+          color: $light;
+          li {
+            margin: 0.7rem 0;
+            list-style: none;
+          }
+        }
+
+        a.link {
+          margin: 1rem 0.5rem;
+          display: inline-block;
+          color: $light;
+          font-weight: 900;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 15px;
+          background: darken($light, 60);
+          @include ease-out-fast;
+          &:hover {
+            background: $primary;
+            color: $dark;
+          }
+        }
+      }
+
+      &:hover {
+        img.project-img {
+          z-index: -1;
+          opacity: 0.1;
+        }
+
+        .content {
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

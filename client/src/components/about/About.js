@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import Particles from 'particlesjs'
 import './about.scss';
 
 const About = () => {
@@ -8,10 +7,17 @@ const About = () => {
   return (
     <div id="about">
       <h1 className="title">
-        About <span className="primary">Me</span> 
+      <span className="primary">About</span> Me 
       </h1>
       <div className='description'>
-        I'm a self taught Full Stack Web Developer who has been learning about the industry since 2015. I've been a freelancer for most of my career. I got a part time job at Rivka Technologies in 2018 and I stopped working there in June 2019. I've worked remotely with very talented people to create sleek and high quality web applications.
+        <p>
+        I'm a self taught Full Stack Web Developer who has been learning about the industry since 2015. I've been a freelancer for most of my career. 
+
+        </p>
+        <p>
+
+        I got a part time job at Rivka Technologies in 2018 and I stopped working there in June 2019. There I worked remotely with very talented people to create high quality web apps and services.
+        </p>
       </div>
       <div className="skills">
         <h2 className="subtitle">

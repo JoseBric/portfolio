@@ -13,6 +13,19 @@ $secondary-blue: #2e9b9b;
   transition: 0.5s ease-in all;
 }
 
+@mixin ease-out-fast {
+  transition: 0.5s ease-out all;
+}
+
 .clear {
   transition: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

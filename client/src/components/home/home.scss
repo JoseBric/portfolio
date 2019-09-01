@@ -10,19 +10,16 @@
 }
 
 #home {
+  animation: fade-in 1s ease-out;
+
   .heavy-1 {
     font-weight: 600;
   }
 
   .big-logo {
-    opacity: 0;
     position: absolute;
     top: 2rem;
     left: calc(50vw - 100px);
-    @include ease-in-fast;
-    &.show-up {
-      opacity: 1;
-    }
   }
 
   .main-title {
@@ -42,44 +39,65 @@
           color: lighten($light, 20);
           font-size: 64px;
           animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
-          
           }
       }
     }
     .description {
-      @include ease-in-fast;
       color: $light;
       font-size: 32px;
       margin-top: 2rem;
-      opacity: 0;
+    }
+  }
+  
+  .contact {
+    color: $light;
+    font-size: 1.2rem;
+    font-weight: 600;
 
-      &.show-up {
-        opacity: 1;
-      }
+    .email {
+      margin: 5rem 0 2rem 0;
     }
   }
 
-  .contact {
-    margin-top: 5rem;
-    opacity: 0;
-    @include ease-in;
-    a.btn-primary {
-      color: $light;
-      // background: $primary;
-      border: $primary 2px dotted;
-      text-decoration: none;
-      padding: 10px;
-
-      border-radius: 15px;
-
-      @include ease-in-fast;
-      &:hover {
-        border-color: $primary;
-        border-style: solid;
+  @media screen and (max-width: 1050px) {
+    h1.title {
+      font-size: 3rem !important;
+    }
+    .description {
+      font-size: 1.7rem !important;
+    }
+    .contact {
+      font-size: 1rem !important;
+      .email {
+        margin: 2rem 0 1rem 0;
       }
     }
-    &.show-up {
-      opacity: 1;
+  }
+  
+  @media screen and (max-width: 650px) {
+    margin-left: 60px !important;
+    .big-logo {
+      left: calc(50vw - 75px + 30px);
+      top: 7rem;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    h1.title {
+      font-size: 2rem !important;
+    }
+    .description {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    h1.title {
+      font-size: 1.5rem !important;
+    }
+    .description {
+      font-size: 1.2rem !important;
     }
   }
 }
