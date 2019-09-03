@@ -100,4 +100,31 @@
       font-size: 1.2rem !important;
     }
   }
+
+  @media screen and (max-height: 650px) {
+    margin-left: 60px !important;
+    .big-logo {
+      left: calc(50vw - 50px + 20px);
+      top: 4rem;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    .big-logo {
+      top: 2;
+    }
+
+    h1.title {
+      font-size: 1.7rem !important;
+      margin-top: 3rem !important;
+    }
+
+    .description {
+      font-size: 1.3rem !important;
+    }
+  }
 }

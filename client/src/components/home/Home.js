@@ -2,33 +2,22 @@ import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom'
 import './home.scss'
 
-let logo
-let title
-let description
-let contact
-
 const Home = () => {
-  useEffect(() => {
-    logo.classList.add('show-up')
-    title.classList.add('show-up')
-    description.classList.add('show-up')
-    contact.classList.add('show-up')
-  }, [])
 
   return (
     <div id="home">
-      <div className="big-logo" ref={el=>logo=el}>
+      <div className="big-logo" >
         <img src="logo.png" alt="logo"/>
       </div>
       <div className="main-title">
         <div className="flex-container">
           <div className="typewriter">
-            <h1 className="title" ref={el=>title=el}>
+            <h1 className="title" >
               Hi, I'm <span className="primary">J</span>osé <span className="primary">B</span>riceño
             </h1>
           </div>
         </div>
-        <div className="description" ref={el=>description=el}>
+        <div className="description" >
           <p>
             <span className="primary heavy-1">
             Full Stack  
@@ -36,7 +25,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="contact" ref={el=>contact=el}>
+      <div className="contact" >
         <p className="email">
           josebric@hotmail.com
         </p>
