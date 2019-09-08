@@ -1,7 +1,7 @@
 @import '../../variables';
 #projects {
   margin-left: 60px;
-  animation: fade-in 1s ease-out;
+  animation: fade-in 0.2s ease-out;
   .title {
     margin: 5rem 0 3rem 0;
   }
@@ -42,7 +42,7 @@
         }
 
         a.link {
-          margin: 1rem 0.5rem;
+          margin: 0.5rem 0.5rem;
           display: inline-block;
           color: $light;
           font-weight: 900;
@@ -71,7 +71,7 @@
     }
   }
 
-  @media (hover: none) {
+  @media (hover: none), (max-height:800px) {
     .project {
       &:hover {
         img {
